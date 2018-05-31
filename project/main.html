@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>MARVEL</title>
+
+
+	<style type="text/css">
+		.menu,
+		.menu ul,
+		.menu li,
+		.menu a {
+			margin: 0;
+			padding: 0;
+			border: none;
+			outline: none;
+		}
+
+		/* Menu */
+
+		.menu {/*메뉴 바 크기*/
+
+      max-width : 100%;
+      height : 80px;
+      position : pixed;
+
+			background: black;
+			border-radius: 5px;
+      display : inline;
+		}
+
+		.menu li {
+			position: relative;
+			list-style: none;
+			float: left;
+			display: block;
+			height: 40px;
+		}
+
+		/* Links */
+
+		.menu li a {
+			display: block;
+			padding: 0 14px;
+			margin: 6px 0;
+			line-height: 30px; /*중간 선 길이*/
+			text-decoration: none;
+
+			border-left: 1px solid #393942; /*선 색상*/
+			border-right: 1px solid #4f5058;
+
+			font-family: Helvetica, Arial, sans-serif;
+			font-weight: bold;
+			font-size: 13px;
+
+			color: white;
+			text-shadow: 1px 1px 1px rgba(0, 0, 0, .6);/*글자 그림자*/
+		}
+
+		.menu li:first-child a {
+			border-left: none;
+		}
+
+		.menu li:last-child a {
+			border-right: none;
+		}
+
+		.menu li:hover>a {
+			color: #8fde62;
+		}
+
+		/* Sub Menu */
+
+		.menu ul {
+			position: absolute;
+			top: 40px;
+			left: 0;
+			opacity: 0;
+			background: #1f2024;
+		}
+
+		.menu li:hover>ul {
+			opacity: 0.8; /*드롭 메뉴바 투명도*/
+		}
+
+		.menu ul li {
+			height: 0;
+			overflow: hidden;
+			padding: 0;
+			transition: height .25s ease .1s;
+		}/*부드럽게 내려오도록*/
+
+		.menu li:hover>ul li {
+			height: 36px;
+			overflow: visible;
+			padding: 0;
+		}/*드롭 다운*/
+
+		.menu ul li a {
+			width: 120px;
+			padding: 4px 0 4px 40px;
+			margin: 0;
+
+			border: none;
+			border-bottom: 1px solid #353530;/*드롭의 중간 선*/
+		}
+
+		.menu ul li:last-child a {
+			border: none;
+		}
+
+		/* Icons */
+
+	/*	.menu a.documents {
+			background: url(./img/docs.png) no-repeat 6px center;
+		}
+
+		.menu a.messages {
+			background: url(./img/bubble.png) no-repeat 6px center;
+		}
+
+		.menu a.signout {
+			background: url(./img/arrow.png) no-repeat 6px center;
+		}*/
+
+		html,
+		body {
+			margin: 0;
+			padding: 0;
+		}
+
+		ul.menu {
+			margin-top : 20px;
+      margin : 20px auto 0 auto; /*메뉴바 위치*/
+      padding-bottom: 5px;
+		}
+   dd {
+     position : pixed;
+      display : inline;
+      margin-top: 18px;
+      padding-top: 3px;
+      margin-left: auto;
+      margin-right : auto;
+      max-width : 100%;
+      height : auto;
+    }
+    header {
+      position : pixed;
+      display: inline-block;
+      background-color : black;
+      width : 100%;
+      max-width : 100%;
+      height : 80px;
+    }
+
+	</style>
+</head>
+
+<body>
+	<header>
+  <dd>
+    <img src="logo.jpg" align=left height=80px width=200px>
+  </dd>
+	<ul class="menu" aling=right>
+		<li><a href="mon_all.html"><pre>    캐릭터    </pre></a>
+			<ul>
+				<li><a href="ironman.html" class="documents" target="print">아이언맨</a></li>
+				<li><a href="" class="messages" target="print">토르</a></li>
+        <li><a href="#" class="messages" target="print">헐크</a></li>
+        <li><a href="#" class="messages" target="print">스파이더맨</a></li>
+        <li><a href="#" class="messages" target="print">캡틴 아메리카</a></li>
+        <li><a href="#" class="messages" target="print">그 외</a></li>
+			</ul>
+
+		</li>
+		<li><a href="#"><pre>     영화     </pre></a>
+			<ul>
+				<li><a href="#" class="documents" target="print">어벤져스</a></li>
+        <li><a href="#" class="documents" target="print">아이언맨</a></li>
+        <li><a href="#" class="documents" target="print">가디언즈 오브 갤럭시</a></li>
+        <li><a href="#" class="documents" target="print">그 외</a></li>
+			</ul>
+		</li>
+		<li><a href="#"><pre>     영상     </pre></a>
+			<ul>
+				<li><a href="#" class="documents" target="print">예고편</a></li>
+				<li><a href="#" class="messages" target="print">TV</a></li>
+        <li><a href="#" class="messages" target="print">기타</a></li>
+			</ul>
+		</li>
+		<li><a href="#"><pre>     상품     </pre></a>
+			<ul>
+				<li><a href="#" class="documents" target="print">장난감</a></li>
+				<li><a href="#" class="messages" target="print">패션</a></li>
+				<li><a href="#" class="signout" target="print">영화/OST</a></li>
+        <li><a href="#" class="documents" target="print">기타</a></li>
+			</ul>
+		</li>
+    <li><a href="#"><pre>     마블소개     </pre></a>
+      <ul>
+      </ul>
+    </li>
+	</ul>
+
+</header>
+<iframe frameborder="0" name="print" width="100%" hieght="700px"></iframe>
+
+</body>
+
+</html>
